@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 100vw;
+    padding-top: 20px;
+    margin-left: calc(-50vw + 50%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.wrapper_semina {
+    margin-block: 100px;
+    margin-left: 114px;
+    margin-right: 114px;
+    text-align: center;
+    position: relative;
+}
+
+.wrapper_voice {
+    width: 100vw;
+    padding: 20px 0px;
+    margin-left: calc(-50vw + 50%);
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel_semina {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+
+.carousel {
+    width: 100vw;
+    margin: 0px auto;
+    position: relative;
+}
+
+.carousel_voice {
+    width: 80vw;
+    margin: 0px auto;
+    position: relative;
+}
+
+.slick-slide {
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.slick-prev:before, .slick-next:before {
+    opacity: 1 !important;
+    color: white !important;
+}
+
+.slick-slide img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -40px; /* Adjust as needed */
+    list-style: none;
+    display: flex !important;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc; /* Default/inactive dot color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slick-dots li button {
+    display: none; /* Hide default button */
+}
+
+.slick-dots li button:before {
+    content: '';
+    display: none;
+
+}
+
+.slick-dots li {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+    background-color: #333;
+}
+
+/* Next and Previous Button Styles */
+.carousel .slick-prev,
+.carousel .slick-next {
+    width: 18px;
+    height: 18px;
+    background-color: #000000 !important;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+    font-size: 20px;
+    color: rgb(255, 255, 255) !important;
+    opacity: 1;
+}
+
+.carousel .slick-prev:hover,
+.carousel .slick-next:hover {
+    background-color: #D2691E !important;
+    transform: scale(1.1);
+}
+
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+
+/* Next and Previous Button Styles */
+.carousel_semina .slick-prev,
+.carousel_semina .slick-next {
+    width: 18px;
+    height: 18px;
+    background-color: #fff !important;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+    font-size: 20px;
+    color: rgb(255, 255, 255) !important;
+    opacity: 1;
+}
+
+.carousel_semina .slick-prev:before,
+.carousel_semina .slick-next:before {
+    font-size: 20px;
+    color: #D2691E !important;
+    opacity: 1;
+}
+
+.carousel_semina .slick-prev:hover,
+.carousel_semina .slick-next:hover {
+    background-color: #ffffff !important;
+    transform: scale(1.1);
+}
+
+/* Next and Previous Button Styles */
+.carousel_voice .slick-prev,
+.carousel_voice .slick-next {
+    width: 18px;
+    height: 18px;
+    background-color: #000000 !important;
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);    
+}
+
+.carousel_voice .slick-prev:before,
+.carousel_voice .slick-next:before {
+    font-size: 20px;
+    color: rgb(255, 255, 255) !important;
+    opacity: 1;
+}
+
+.carousel_voice .slick-prev:hover,
+.carousel_voice .slick-next:hover {
+    background-color: #D2691E !important;
+    transform: scale(1.1);
+}
+
+.carousel_voice .slick-prev:before,
+.carousel_voice .slick-next:before {
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #D2691E !important;
+    transform: scale(1.1);
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+    color: white;
+    opacity: 1;
+}
+
+.carousel_voice .slick-prev {
+    left: -40px !important; 
+    scale: 1.5;
+}
+
+.carousel_voice .slick-next {
+    right: -40px !important;
+    scale: 1.5;
+}
+
+.carousel .slick-prev {
+    left: 50px !important; 
+    scale: 1.5;
+}
+
+.carousel .slick-next {
+    right: 50px !important;
+    scale: 1.5;
+}
+
+.carousel_semina .slick-prev {
+    /* left: 50px !important;  */
+    top: -10px;
+    right: 0;
+    left: calc(100% - 200px);
+    scale: 1.5;
+}
+
+.carousel_semina .slick-next {
+    right: 50px !important;
+    scale: 1.5;
+    top: -10px;
+}
+
+
+
+/* Slide Counter */
+.slick-counter {
+    position: absolute;
+    top: -33px;
+    right: 93px;
+    background-color: #E57D22;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .wrapper_semina {
+        margin-block: 70px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .slick-prev {
+        left: 30px;
+    }
+    
+    .slick-next {
+        right: 30px;
+    }
+    
+    .slick-prev,
+    .slick-next {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .slick-prev:before,
+    .slick-next:before {
+        font-size: 16px;
+    }
+    
+    /* Adjust for mobile */
+    .slick-slide:not(.slick-center) {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    .carousel_voice .slick-prev {
+        left: -20px !important; 
+        scale: 1.5;
+    }
+    
+    .carousel_voice .slick-next {
+        right: -20px !important;
+        scale: 1.5;
+    }
+}
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #6B4A34;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#mobile-menu.translate-x-0 {
+    transform: translateX(0);
+}
+
+#mobile-menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* Hide desktop navigation on mobile */
+    header nav,
+    header .flex.gap-4 {
+        display: none;
+    }
+}
+
+/* Mobile menu header */
+#mobile-menu .flex.justify-between {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Mobile menu navigation */
+#mobile-menu nav ul li {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#mobile-menu nav ul li:last-child {
+    border-bottom: none;
+}
+
+#mobile-menu nav a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 1000;
+    color: #5a2f12;
+    transition: color 0.2s ease;
+}
+
+#mobile-menu nav a:hover {
+    color: #f97316;
+}
+
+/* Mobile menu buttons */
+#mobile-menu button {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    background: white;
+    color: #1f2937;
+    font-size: 1.125rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+#mobile-menu button:hover {
+    background-color: #f9fafb;
+}
+
+
+#close-menu-btn {
+    width: auto !important;
+    background: none !important;
+    border:none !important;
+}
+
+/* Mobile Footer Styles */
+@media (max-width: 768px) {
+    footer {
+        background-color: #4A4A4A !important;
+    }
+    
+    footer .md\\:hidden {
+        background-color: #4A4A4A;
+    }
+    
+    /* Mobile footer logo and company name */
+    footer .md\\:hidden .flex.items-center {
+        margin-bottom: 2rem;
+    }
+    
+    footer .md\\:hidden .text-gray-300 {
+        color: #D1D5DB;
+    }
+    
+    /* Mobile footer menu items */
+    footer .md\\:hidden nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    footer .md\\:hidden nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    footer .md\\:hidden nav a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        color: white;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    footer .md\\:hidden nav a:hover {
+        color: #f97316;
+    }
+    
+    /* Arrow icons in mobile footer */
+    footer .md\\:hidden svg {
+        width: 12px;
+        height: 12px;
+        color: black;
+        fill: currentColor;
+    }
+    
+    /* Mobile footer text */
+    footer .md\\:hidden .text-center {
+        margin-top: 2rem;
+    }
+    
+    footer .md\\:hidden .text-gray-300 {
+        color: #D1D5DB;
+    }
+    
+    footer .md\\:hidden .text-gray-400 {
+        color: #9CA3AF;
+    }
+}
+
+/* Page Top Button Styles */
+#page-top-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 40;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+#page-top-btn.show {
+    opacity: 0.7;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+#page-top-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Arrow icon */
+#page-top-btn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: black;
+    stroke-width: 2;
+}
+
+/* Text styling */
+#page-top-btn .text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #page-top-btn {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    #page-top-btn .bg-purple-200 {
+        padding: 0.5rem;
+    }
+    
+    #page-top-btn .bg-gray-200 {
+        padding: 0.375rem;
+    }
+    
+    #page-top-btn svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    
+    #page-top-btn .text-xs {
+        font-size: 0.625rem;
+    }
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
