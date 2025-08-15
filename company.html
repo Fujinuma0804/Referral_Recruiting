@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REFERRAL RECRUITING</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="font-[Noto Sans JP]">
+    <header class="bg-[#6B4A34] text-white fixed top-0 left-0 w-full z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-between px-4 py-4">
+            <div class="flex flex-row items-center w-full justify-between">
+                <!-- Logo and company link -->
+                <a href="#" class="flex items-center space-x-4">
+                    <img src="./assets/img/logo.png" alt="Referral Recruiting" class="h-13">
+                </a>
+
+                <!-- Right section - buttons -->
+                <div class="hidden md:flex space-x-3">
+                    <a href="#" class="text-sm hover:underline flex whitespace-nowrap text-[#F8F3E6]">
+                        白潟総合研究所株式会社のサイトはこちら &nbsp;
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="expand" class="scale-80">
+                            <path fill="none" d="M0 0h24v24H0Z"></path>
+                            <path fill="#fff"
+                                d="M21.6 4.2v6.3a.9.9 0 1 1-1.8 0V5.9l-9.051 9.048a1.202 1.202 0 0 1-1.7-1.7L18.1 4.2h-4.6a.9.9 0 0 1 0-1.8h6.3a1.805 1.805 0 0 1 1.8 1.8Zm-.9 10.5a.9.9 0 0 0-.9.9v4.2H4.2V4.2h4.2a.9.9 0 1 0 0-1.8H4.2a1.805 1.805 0 0 0-1.8 1.8v15.6a1.805 1.805 0 0 0 1.8 1.8h15.6a1.805 1.805 0 0 0 1.8-1.8v-4.2a.9.9 0 0 0-.9-.9Z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Mobile hamburger menu button -->
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col items-center space-y-1">
+                    <svg id="hamburger-icon" class="w-6 h-6 text-gray-800" fill="none" stroke="white" stroke-width="2"
+                        viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <span class="text-xs text-white mt-1">MENU</span>
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <div class="flex flex-row items-center justify-end w-full mt-4 gap-4">
+                <nav class="flex items-center space-x-6 text-sm">
+                    <a href="#" class="hover:underline font-medium">TOP</a>
+                    <a href="#" class="hover:underline">事例紹介</a>
+                    <a href="#" class="hover:underline">サービス紹介</a>
+                    <a href="#" class="hover:underline">セミナー</a>
+                    <a href="#" class="hover:underline">会社概要</a>
+                </nav>
+                <div class="flex gap-4 text-center">
+                    <div class="w-44 px-4 py-2 text-sm bg-white hover:bg-[#E57D22] text-black hover:text-white">
+                        <a href="#">セミナーのお申し込み</a>
+                    </div>
+                    <div class="w-44 px-4 py-2 text-sm bg-white hover:bg-[#E57D22] text-black hover:text-white">
+                        <a href="#">資料請求</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-[#6B4A34] z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Mobile Menu Header -->
+        <div class="flex justify-between items-center px-4 py-4 border-b border-gray-600">
+            <a href="#" class="flex items-center space-x-4">
+                <img src="./assets/img/logo.png" alt="Referral Recruiting" class="h-10">
+            </a>
+            <button id="close-menu-btn" class="flex flex-col items-center space-y-1">
+                <svg id="close-icon" class="w-6 h-6 text-gray-800 hidden" fill="none" stroke="white" stroke-width="2"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span class="text-xs text-white mt-4">CLOSE</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Content -->
+        <div class="bg-white text-yellow-800">
+            <nav class="px-10 py-6">
+                <ul class="space-y-0">
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-4 text-lg font-medium hover:text-orange-500">TOP</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-4 text-lg font-medium hover:text-orange-500">事例紹介</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-4 text-lg font-medium hover:text-orange-500">サービス紹介</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-4 text-lg font-medium hover:text-orange-500">セミナー</a>
+                    </li>
+                    <li class="border-b border-gray-200">
+                        <a href="#" class="block py-4 text-lg font-medium hover:text-orange-500">会社概要</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Buttons -->
+            <div class="px-4 pb-6 space-y-4 text-center">
+                <div
+                    class="w-full py-4 border border-gray-300 text-lg font-black hover:bg-[#E57D22] text-black hover:text-white cursor-pointer">
+                    <a href="#" class="text-[#5a2f12]">セミナーのお申し込み</a>
+                </div>
+                <div
+                    class="w-full py-4 border border-gray-300 text-lg font-black hover:bg-[#E57D22] text-black hover:text-white cursor-pointer">
+                    <a href="#" class="text-[#5a2f12]">資料請求</a>
+                </div>
+                <!-- <button class="w-full py-4 border border-gray-300 text-lg font-medium hover:bg-gray-50 transition-colors">
+                    セミナーのお申し込み
+                </button>
+                <button class="w-full py-4 border border-gray-300 text-lg font-medium hover:bg-gray-50 transition-colors">
+                    資料請求
+                </button> -->
+            </div>
+        </div>
+    </div>
+    <main class="mt-24">
+        <section
+            class="relative -mt-[14px] md:mt-[136px] bg-cover bg-center h-48 md:h-64 flex items-center justify-start"
+            style="background-image: url('./assets/img/fv2.png');">
+            <!-- Overlay (orange color) -->
+            <div class="absolute inset-0 top-1/2 left-0 transform -translate-y-1/2"></div>
+            <div
+                class="bg-white bg-opacity-100 px-auto py-6 text-center text-2xl md:text-5xl font-bold leading-snug w-1/2 shadow-lg opacity-80">
+                会社概要
+            </div>
+            </div>
+        </section>
+
+        <section class="relative mx-auto px-4 py-12">
+
+            <!-- Large Background Text -->
+            <div
+                class="absolute top-0 left-0 w-full text-[#F4B635] opacity-10 text-[10rem] font-bold leading-none pointer-events-none select-none">
+                MESSAGE
+            </div>
+            <!-- Small Title -->
+            <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="pl-2 sm:pl-12 pt-20 mb-6">
+                    <div class="h-1 w-8 md:w-16 bg-orange-500 mb-1"></div>
+                    <h2 class="text-orange-500 font-bold text-xl md:text-3xl text-left tracking-tight">MESSAGE</h2>
+                </div>
+                <p class="font-bold text-xl md:text-3xl pl-2 sm:pl-12 leading-normal md:leading-[3rem] mb-6 md:mb-24">
+                    弊社は「採用に悩む社長に、<br>
+                    最高の仲間がドンドン集まる喜びを届ける」会社です。
+                </p>
+            </div>
+
+
+            <!-- Content Grid -->
+            <div class="relative grid my-4 md:my-10 md:grid-cols-2 max-w-4xl mx-auto gap-4">
+                <!-- Right Column: Image -->
+                <div class="flex justify-center md:justify-end items-start block md:hidden">
+                    <img src="./assets/img/ceo.png" alt="社長写真" class="max-w-xs w-full object-contain">
+                </div>
+
+                <!-- Left Column: Text -->
+                <div class="md:col-span-1">
+                    <p class="text-gray-800 leading-relaxed mb-4">
+                        はじめまして、リファラルリクルーティングの社長白潟敏朗（しらがたとしろう）です。弊社のホームページをご覧いただき本当にありがとうございます。
+                    </p>
+                    <p class="text-gray-800 leading-relaxed mb-4">
+                        私は、中小企業の社長を元気にすることを使命とし、日々自社の経営とお客様へのコンサルティングに取り組んでいる人間です。デロイトト－マツグループのトーマツイノベーションの前社長で経営コンサルタントとして２７年間の経験を積んでいます。著書も４３冊ほど出版させて頂いており、お陰様で累計９４万部ほど売れています。
+                    </p>
+                    <p class="text-gray-800 leading-relaxed">
+                        この２７年間で12200人の社長にお目にかかり、様々な経営の悩みを伺ってまいりました。社長の悩みの中でも採用に関する悩みは、極めて重要な経営課題の１つであると実感しています。
+                    </p>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="flex justify-center md:justify-end items-start hidden md:block">
+                    <img src="./assets/img/ceo.png" alt="社長写真" class="max-w-xs w-full object-contain">
+                </div>
+
+            </div>
+
+            <!-- Additional Content -->
+            <div class="space-y-5 leading-relaxed max-w-4xl mx-auto text-gray-800">
+                <p>
+                    先日お目にかかった社長は、社員５人の成長中のＩＴ企業の社長でした。有名なネットの求人広告に90万円のお金をかけておられましたが、残念ながら結果は応募ゼロでした。『白潟さん、求人広告では人が採れないよ！うちみたいな会社はどうすればいいの？』という切実な悩みを伺いました。ネットサービス業の社長は求人広告だけでなく人材紹介会社も活用していましたが、やはりなかなか人が採れないと嘆いていらっしゃいました。一方、人は採れているけれども、定着率が悪いという課題を抱えている社長もいらっしゃいます。
+                </p>
+                <p>
+                    そのような社長の切実な採用の悩みを解決するために、弊社は存在していますし、それを使命としています。そして、社長のゆずれないおもいと考え方に賛同する最高の仲間がドンドン集まる喜びを、たくさんの社長と社員にお届けしたい。こうような想いでいっぱいの社員しか働いていない会社です。
+                </p>
+                <p>
+                    弊社の使命を全うするために、弊社ではリファラルリクルーティング
+                    という手法（詳細は、サービス紹介やブログをご覧ください）を活用し社長のサポートをしています。
+                </p>
+            </div>
+
+        </section>
+
+        <section class="relative bg-[#F8F7F1] mx-auto px-4 py-12">
+            <!-- Large Background Text -->
+            <div
+                class="absolute top-0 right-0 w-full z-10 text-[#78766F] opacity-10 text-[10rem] font-bold leading-none pointer-events-none select-none">
+                COMPANY
+            </div>
+            <!-- Small Title -->
+            <div class="mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="pl-2 sm:pl-12 pt-20 mb-6 text-center">
+                    <h2 class="relative inline-block text-orange-500 font-bold text-xl md:text-3xl tracking-tight
+                               before:content-[''] before:block before:h-1 before:w-8 md:before:w-12 
+                               before:bg-orange-500 before:mb-1 before:ml-0 ">
+                        COMPANY
+                    </h2>
+                </div>
+                <p class="font-bold text-xl md:text-3xl pl-2 sm:pl-12 leading-normal md:leading-[3rem] mb-6 md:mb-24">
+                    会社概要
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-12">
+
+                <!-- Table-like content -->
+                <div class="bg-white rounded-lg shadow ring-1 ring-gray-200 p-6">
+                    <dl class="divide-y divide-gray-200">
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">社名</dt>
+                            <dd class="sm:col-span-3 text-gray-800">白潟総合研究所株式会社</dd>
+                        </div>
+
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">代表者</dt>
+                            <dd class="sm:col-span-3 text-gray-800">代表取締役社長 白潟 敏朗</dd>
+                        </div>
+
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">設立</dt>
+                            <dd class="sm:col-span-3 text-gray-800">2014年10月2日</dd>
+                        </div>
+
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">事業内容</dt>
+                            <dd class="sm:col-span-3 text-gray-800">
+                                リファラルリクルーティングに関する<br>
+                                ・コンサルティング事業<br>
+                                ・研修事業
+                            </dd>
+                        </div>
+
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">グループ会社</dt>
+                            <dd class="sm:col-span-3 text-blue-600 hover:underline">M&amp;Aイノベーション株式会社</dd>
+                        </div>
+
+                        <div class="py-4 grid grid-cols-1 sm:grid-cols-4 gap-4">
+                            <dt class="font-bold text-gray-700">所在地</dt>
+                            <dd class="sm:col-span-3 space-y-4 text-gray-800">
+                                <div>
+                                    <span class="font-bold">■東京本社</span><br>
+                                    〒103-0001 東京都中央区日本橋小伝馬町4丁目11 サンコービル7F<br>
+                                    《アクセス》「小伝馬町駅」徒歩2分
+                                </div>
+                                <div>
+                                    <span class="font-bold">■大阪支社</span><br>
+                                    〒541-0046 大阪府大阪市中央区平野町2丁目2番13号 堺筋センタービル29F<br>
+                                    《アクセス》「北浜駅」より徒歩6分
+                                </div>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+
+                <!-- Maps -->
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="space-y-2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1620.2156884944393!2d139.77845657357125!3d35.69100080631687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188eacb3fd9a9f%3A0xe2a4085850bb45ab!2sNihonbashikodenmacho%2C%20Chuo%20City%2C%20Tokyo%20103-0001!5e0!3m2!1sen!2sjp!4v1755199346996!5m2!1sen!2sjp"
+                            class="w-[300px] h-[300px] md:w-[400px] md:h-[400px]" style="border:0;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <img src="tokyo-map.jpg" alt="東京本社マップ" class="w-full rounded border border-gray-300"> -->
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-700">■東京本社</span>
+                            <a href="#"
+                                class="px-3 py-1 border-2 border-orange-500 text-orange-500 hover:text-white text-xs rounded hover:bg-orange-600">
+                                Googleマップ
+                            </a>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1640.3523717670337!2d135.50398639839474!3d34.68740060000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e70038e430b3%3A0xa408516c30ac34cf!2z55m95r2f57eP5ZCI56CU56m25omA!5e0!3m2!1sen!2sjp!4v1755200158158!5m2!1sen!2sjp"
+                            class="w-[300px] h-[300px] md:w-[400px] md:h-[400px]" style="border:0;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-gray-700">■大阪支社</span>
+                            <a href="#"
+                                class="px-3 py-1 border-2 border-orange-500 text-orange-500 hover:text-white text-xs rounded hover:bg-orange-600">
+                                Googleマップ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="relative py-16">
+            <!-- Large Background Text -->
+            <div
+                class="absolute top-0 right-0 w-full z-10 text-[#78766F] opacity-10 text-[10rem] font-bold leading-none pointer-events-none select-none">
+                SEMINAR
+            </div>
+            <!-- Small Title -->
+            <div class="mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="pl-2 sm:pl-12 pt-20 mb-6 text-center">
+                    <h2 class="relative inline-block text-orange-500 font-bold text-xl md:text-3xl tracking-tight
+                               before:content-[''] before:block before:h-1 before:w-8 md:before:w-12 
+                               before:bg-orange-500 before:mb-1 before:ml-0 ">
+                        SEMINAR
+                    </h2>
+                </div>
+                <p class="font-bold text-xl md:text-3xl pl-2 sm:pl-12 leading-normal md:leading-[3rem] mb-6 md:mb-24">
+                    セミナー情報
+                </p>
+            </div>
+
+
+            <div class="relative container mx-auto px-4">
+
+                <!-- Grid Layout -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card -->
+                    <div class="bg-white shadow overflow-hidden">
+                        <img src="./assets/img/semina.png" alt="セミナー画像" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <div class="flex space-x-3 text-sm mb-3">
+                                <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">カテゴリー</span>
+                                <span class="text-orange-500 font-semibold">2025.07.01</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">セミナータイトル</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                説明テキストがはいります説明テキストがはいります説明テキストがはいります説明テキストがはいります
+                            </p>
+                            <a href="#" class="font-semibold inline-flex items-center border-b-2 ">
+                                詳しく見る <span class="ml-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate the card for demo -->
+                    <div class="bg-white shadow overflow-hidden">
+                        <img src="./assets/img/semina.png" alt="セミナー画像" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <div class="flex space-x-3 text-sm mb-3">
+                                <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">カテゴリー</span>
+                                <span class="text-orange-500 font-semibold">2025.07.01</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">セミナータイトル</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                説明テキストがはいります説明テキストがはいります説明テキストがはいります説明テキストがはいります
+                            </p>
+                            <a href="#" class="font-semibold inline-flex items-center border-b-2 ">
+                                詳しく見る <span class="ml-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white shadow overflow-hidden">
+                        <img src="./assets/img/semina.png" alt="セミナー画像" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <div class="flex space-x-3 text-sm mb-3">
+                                <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">カテゴリー</span>
+                                <span class="text-orange-500 font-semibold">2025.07.01</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">セミナータイトル</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                説明テキストがはいります説明テキストがはいります説明テキストがはいります説明テキストがはいります
+                            </p>
+                            <a href="#" class="font-semibold inline-flex items-center border-b-2 ">
+                                詳しく見る <span class="ml-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white shadow overflow-hidden">
+                        <img src="./assets/img/semina.png" alt="セミナー画像" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <div class="flex space-x-3 text-sm mb-3">
+                                <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">カテゴリー</span>
+                                <span class="text-orange-500 font-semibold">2025.07.01</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">セミナータイトル</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                説明テキストがはいります説明テキストがはいります説明テキストがはいります説明テキストがはいります
+                            </p>
+                            <a href="#" class="font-semibold inline-flex items-center border-b-2 ">
+                                詳しく見る <span class="ml-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white shadow overflow-hidden">
+                        <img src="./assets/img/semina.png" alt="セミナー画像" class="w-full h-48 object-cover">
+                        <div class="p-5">
+                            <div class="flex space-x-3 text-sm mb-3">
+                                <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">カテゴリー</span>
+                                <span class="text-orange-500 font-semibold">2025.07.01</span>
+                            </div>
+                            <h4 class="font-bold text-lg mb-2">セミナータイトル</h4>
+                            <p class="text-gray-600 text-sm mb-4">
+                                説明テキストがはいります説明テキストがはいります説明テキストがはいります説明テキストがはいります
+                            </p>
+                            <a href="#" class="font-semibold inline-flex items-center border-b-2 ">
+                                詳しく見る <span class="ml-1">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="relative bg-gray-100">
+            <!-- Background Image -->
+            <div class="absolute inset-0">
+                <img src="./assets/img/fv1.png" alt="Background" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-white bg-opacity-70"></div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative max-w-4xl mx-auto px-4 py-12 text-center">
+                <p class="text-gray-600 font-bold text-md md:text-xl mb-2">＼ほぼノーコストで／</p>
+                <h2 class="text-xl md:text-2xl font-bold !leading-9 mb-4">
+                    <span class="text-orange-500 font-semibold">会社の理念に共鳴する社員</span>
+                    を採用できる
+                    <br class="hidden sm:block">
+                    リファラル採用のはじめ方を１冊にまとめました
+                </h2>
+                <a href="#"
+                    class="inline-flex items-center justify-center gap-2 bg-gradient-to-b from-green-600 to-green-700 hover:from-green-500 hover:to-green-700 text-white text-sm md:text-base font-medium px-6 py-3 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                    小冊子の詳細を見る
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <section
+            class="relative w-full pt-32 pb-16 px-6 bg-gradient-to-r from-purple-900 via-blue-900 to-purple-900 text-center">
+            <!-- Large background text -->
+            <h1
+                class="absolute top-0 left-0 pl-4 text-7xl md:text-[240px] font-bold text-[#F4B635] opacity-10 uppercase select-none z-0">
+                CONTACT</h1>
+
+            <!-- Heading -->
+            <div class="relative mb-10 z-10 text-center justify-center ">
+                <div class=" mx-auto px-4 md:px-10 pt-2 items-center flex flex-col">
+                    <div class="h-1 w-16 bg-orange-500 mb-2"></div>
+                    <h2 class="text-orange-500 font-bold text-md md:text-3xl text-left tracking-tight">CONTACT</h2>
+                </div>
+                <h2 class="text-white text-xl md:text-3xl font-bold mt-2">お問い合わせ</h2>
+            </div>
+
+
+            <!-- Content container -->
+            <div class="relative z-10 max-w-3xl mx-auto">
+
+                <p class="text-white text-md md:text-xl">おまずは課題に感じている点をお聞かせください！！</p>
+
+                <!-- Buttons -->
+                <div class="mt-8 flex flex-col sm:flex-row gap-0 sm:gap-4 justify-center items-center">
+                    <div class="flex justify-center mt-8 w-72">
+                        <a href="#"
+                            class="inline-flex justify-between items-center px-8 py-4 text-white font-semibold text-base md:text-lg rounded-full shadow-xl bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition w-full max-w-xs mx-auto">
+                            <div></div>
+                            セミナーのお申し込み
+                            <div class="flex items-center justify-right ml-3">
+                                <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center mt-8 w-72">
+                        <a href="#"
+                            class="inline-flex justify-between items-center px-8 py-4 text-white font-semibold text-base md:text-lg rounded-full shadow-xl bg-gradient-to-r from-yellow-400 to-orange-500 hover:opacity-90 transition w-full max-w-xs mx-auto">
+                            <div></div>
+                            資料請求
+                            <div class="flex items-center justify-right ml-3">
+                                <svg class="w-6 h-6" fill="white" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full bg-[#4A4A4A]">
+        <!-- Desktop Footer -->
+        <div class="hidden md:block">
+            <div class="flex flex-col items-center justify-center bg-[#3f3f3f] text-white relative">
+                <!-- Main footer content -->
+                <div
+                    class="relative z-10 w-full max-w-7xl px-6 py-10 flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                    <!-- Left logo -->
+                    <div class="flex items-center gap-2">
+                        <img src="./assets/img/logo.png" alt="Logo" class="h-16">
+                    </div>
+                    <!-- Menu -->
+                    <nav class="mt-6 sm:mt-0 flex flex-wrap gap-6 text-sm">
+                        <a href="#" class="hover:text-orange-400">TOP</a>
+                        <a href="#" class="hover:text-orange-400">事例紹介</a>
+                        <a href="#" class="hover:text-orange-400">サービス紹介</a>
+                        <a href="#semina" class="hover:text-orange-400">セミナー</a>
+                        <a href="#" class="hover:text-orange-400">会社概要</a>
+                    </nav>
+                </div>
+                <!-- Bottom footer -->
+                <div
+                    class="relative gap-2 md:gap-10 z-10 w-full max-w-7xl px-6 pt-4 pb-16 flex flex-col sm:flex-row sm:justify-end text-xs text-gray-300">
+                    <a href="#" class="hover:text-orange-400">プライバシーポリシー</a>
+                    <span>Copyright © All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Footer -->
+        <div class="md:hidden bg-[#4A4A4A] text-white px-6 py-8">
+            <!-- Logo and Company Name -->
+            <div class="flex items-center gap-3 mb-8">
+                <img src="./assets/img/logo.png" alt="Logo" class="h-16">
+            </div>
+
+            <!-- Menu Items -->
+            <nav class="mb-8">
+                <ul class="space-y-0">
+                    <li class="border-b border-white border-opacity-20">
+                        <a href="#" class="flex items-center justify-between py-4 text-white hover:text-orange-400">
+                            <span>TOP</span>
+                            <svg class="w-3 h-3 text-black" fill="white" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="border-b border-white border-opacity-20">
+                        <a href="#" class="flex items-center justify-between py-4 text-white hover:text-orange-400">
+                            <span>サービス紹介</span>
+                            <svg class="w-3 h-3 text-black" fill="white" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="border-b border-white border-opacity-20">
+                        <a href="#" class="flex items-center justify-between py-4 text-white hover:text-orange-400">
+                            <span>事例紹介</span>
+                            <svg class="w-3 h-3 text-black" fill="white" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="border-b border-white border-opacity-20">
+                        <a href="#" class="flex items-center justify-between py-4 text-white hover:text-orange-400">
+                            <span>セミナー</span>
+                            <svg class="w-3 h-3 text-black" fill="white" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="border-b border-white border-opacity-20">
+                        <a href="#" class="flex items-center justify-between py-4 text-white hover:text-orange-400">
+                            <span>会社概要</span>
+                            <svg class="w-3 h-3 text-black" fill="white" viewBox="0 0 24 24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer Text -->
+            <div class="text-center space-y-2 py-10">
+                <div class="text-gray-300 text-sm">プライバシーポリシー</div>
+                <div class="text-gray-400 text-xs">Copyright © All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Page Top Button -->
+    <button id="page-top-btn"
+        class="fixed p-3 w-20 h-20 bottom-8 right-8 z-100 border-2 border-black bg-white shadow-lg transition-all duration-300 pointer-events-none">
+        <div class="rounded-t-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+            </svg>
+        </div>
+        <div class="text-center">
+            <div class="text-black text-xs font-medium">PAGE</div>
+            <div class="text-black text-xs font-medium">TOP</div>
+        </div>
+    </button>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./assets/js/index.js"></script>
+
+</html>
