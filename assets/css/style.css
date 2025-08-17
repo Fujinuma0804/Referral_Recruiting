@@ -5,6 +5,28 @@ body {
     overflow-x: hidden;
 }
 
+.w-base {
+    margin-inline: 120px!important;    
+}
+
+@media (max-width: 1280px) {
+    .w-base {
+        margin-inline: 40px!important;    
+    }
+}
+
+@media (max-width: 768px) {
+    .w-base {
+        margin-inline: 20px!important;    
+    }
+}
+
+@media (max-width: 500px) {
+    .w-base {
+        margin-inline: 10px!important;    
+    }
+}
+
 .wrapper {
     width: 100vw;
     padding-top: 20px;
@@ -49,6 +71,7 @@ body {
 
 .slick-slide {
     margin: 10px;
+    margin-inline: 30px;
     transition: all 0.3s ease;
 }
 
@@ -145,7 +168,7 @@ body {
 .carousel_semina .slick-next {
     width: 18px;
     height: 18px;
-    background-color: #fff !important;
+    background-color: #D2691E;
     border-radius: 50%;
     z-index: 10;
     transition: all 0.3s ease;
@@ -156,43 +179,49 @@ body {
 
 .carousel .slick-prev:before,
 .carousel .slick-next:before {
-    font-size: 20px;
+    font-size: 22px;
     color: rgb(255, 255, 255) !important;
     opacity: 1;
+    position: absolute;
+    left: -2px;
+    top: 0px;
 }
 
 .carousel_semina .slick-prev:before,
 .carousel_semina .slick-next:before {
     font-size: 20px;
-    color: #D2691E !important;
     opacity: 1;
+    font-family: monospace;
 }
 
 .carousel_semina .slick-prev:hover,
 .carousel_semina .slick-next:hover {
-    background-color: #ffffff !important;
     transform: scale(1.1);
 }
 
 /* Next and Previous Button Styles */
 .carousel_voice .slick-prev,
 .carousel_voice .slick-next {
-    width: 18px;
-    height: 18px;
+    width: 15px;
+    height: 16px;
     background-color: #000000 !important;
     border-radius: 50%;
     z-index: 10;
     transition: all 0.3s ease;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .carousel_voice .slick-prev:before,
 .carousel_voice .slick-next:before {
-    font-size: 20px;
+    font-size: 22px;
     color: rgb(255, 255, 255) !important;
     opacity: 1;
+    position: absolute;
+    top: -1px;
+    left: -2px;
 }
 
 .carousel_voice .slick-prev:hover,
