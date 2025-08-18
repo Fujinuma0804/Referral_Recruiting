@@ -302,6 +302,19 @@ body {
 
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
+    .carousel_semina .slick-prev {
+        /* left: 50px !important;  */
+        top: -10px;
+        right: 0;
+        left: calc(100% - 255px);
+        scale: 1.5;
+    }
+    .carousel_semina .slick-next {
+        right: 110px !important;
+    }
+    .slick-counter {
+        right: 153px;
+    }
     .wrapper_semina {
         margin-block: 70px;
         margin-left: 20px;
