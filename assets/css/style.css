@@ -6,24 +6,29 @@ body {
 }
 
 .w-base {
-    margin-inline: 120px!important;    
+    margin-inline: 120px !important;
 }
 
 @media (max-width: 1280px) {
     .w-base {
-        margin-inline: 40px!important;    
+        margin-inline: 40px !important;
     }
 }
 
 @media (max-width: 768px) {
     .w-base {
-        margin-inline: 20px!important;    
+        margin-inline: 20px !important;
     }
 }
 
 @media (max-width: 500px) {
     .w-base {
-        margin-inline: 10px!important;    
+        margin-inline: 10px !important;
+    }
+
+    .slick-dots li {
+        width: 10px !important;
+        height: 10px !important;
     }
 }
 
@@ -75,7 +80,8 @@ body {
     transition: all 0.3s ease;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
     opacity: 1 !important;
     color: white !important;
 }
@@ -87,7 +93,8 @@ body {
 
 .slick-dots {
     position: absolute;
-    bottom: -40px; /* Adjust as needed */
+    bottom: -40px;
+    /* Adjust as needed */
     list-style: none;
     display: flex !important;
     justify-content: center;
@@ -101,13 +108,15 @@ body {
     height: 10px;
     margin: 0 5px;
     border-radius: 50%;
-    background-color: #ccc; /* Default/inactive dot color */
+    background-color: #ccc;
+    /* Default/inactive dot color */
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .slick-dots li button {
-    display: none; /* Hide default button */
+    display: none;
+    /* Hide default button */
 }
 
 .slick-dots li button:before {
@@ -134,13 +143,13 @@ body {
 .carousel .slick-next {
     width: 18px;
     height: 18px;
-    background-color: #000000 !important;
+    background-color: #3d3d3d !important;
     border-radius: 50%;
     z-index: 10;
     transition: all 0.3s ease;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 
 .carousel .slick-prev:before,
@@ -152,13 +161,13 @@ body {
 
 .carousel .slick-prev:hover,
 .carousel .slick-next:hover {
-    background-color: #D2691E !important;
-    transform: scale(1.1);
+    background-color: #000 !important;
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel .slick-prev:before,
 .carousel .slick-next:before {
-    font-size: 20px;
+    font-size: 19px;
     color: white;
     opacity: 1;
 }
@@ -174,7 +183,7 @@ body {
     transition: all 0.3s ease;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);    
+    transform: translateY(-50%);
 }
 
 .carousel .slick-prev:before,
@@ -196,7 +205,8 @@ body {
 
 .carousel_semina .slick-prev:hover,
 .carousel_semina .slick-next:hover {
-    transform: scale(1.1);
+    background-color: #D2691E;
+    transform: translateY(-50%) scale(1.1);
 }
 
 /* Next and Previous Button Styles */
@@ -226,8 +236,7 @@ body {
 
 .carousel_voice .slick-prev:hover,
 .carousel_voice .slick-next:hover {
-    background-color: #D2691E !important;
-    transform: scale(1.1);
+    transform: translateY(-50%) scale(1.1);
 }
 
 .carousel_voice .slick-prev:before,
@@ -239,7 +248,7 @@ body {
 
 .slick-prev:hover,
 .slick-next:hover {
-    background-color: #D2691E !important;
+    background-color: #000 !important;
     transform: scale(1.1);
 }
 
@@ -251,7 +260,7 @@ body {
 }
 
 .carousel_voice .slick-prev {
-    left: -40px !important; 
+    left: -40px !important;
     scale: 1.5;
 }
 
@@ -261,7 +270,7 @@ body {
 }
 
 .carousel .slick-prev {
-    left: 50px !important; 
+    left: 50px !important;
     scale: 1.5;
 }
 
@@ -291,8 +300,7 @@ body {
     position: absolute;
     top: -33px;
     right: 93px;
-    background-color: #E57D22;
-    color: white;
+    color: black;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 14px;
@@ -306,15 +314,18 @@ body {
         /* left: 50px !important;  */
         top: -10px;
         right: 0;
-        left: calc(100% - 255px);
+        left: calc(100% - 215px);
         scale: 1.5;
     }
+
     .carousel_semina .slick-next {
-        right: 110px !important;
+        right: 84px !important;
     }
+
     .slick-counter {
-        right: 153px;
+        right: 120px;
     }
+
     .wrapper_semina {
         margin-block: 70px;
         margin-left: 20px;
@@ -324,22 +335,22 @@ body {
     .slick-prev {
         left: 30px;
     }
-    
+
     .slick-next {
         right: 30px;
     }
-    
+
     .slick-prev,
     .slick-next {
         width: 35px;
         height: 35px;
     }
-    
+
     .slick-prev:before,
     .slick-next:before {
         font-size: 16px;
     }
-    
+
     /* Adjust for mobile */
     .slick-slide:not(.slick-center) {
         opacity: 0.4;
@@ -347,10 +358,10 @@ body {
     }
 
     .carousel_voice .slick-prev {
-        left: -20px !important; 
+        left: -20px !important;
         scale: 1.5;
     }
-    
+
     .carousel_voice .slick-next {
         right: -20px !important;
         scale: 1.5;
@@ -382,7 +393,7 @@ body {
     #mobile-menu-btn {
         display: flex;
     }
-    
+
     /* Hide desktop navigation on mobile */
     header nav,
     header .flex.gap-4 {
@@ -437,7 +448,7 @@ body {
 #close-menu-btn {
     width: auto !important;
     background: none !important;
-    border:none !important;
+    border: none !important;
 }
 
 /* Mobile Footer Styles */
@@ -445,29 +456,29 @@ body {
     footer {
         background-color: #4A4A4A !important;
     }
-    
+
     footer .md\\:hidden {
         background-color: #4A4A4A;
     }
-    
+
     /* Mobile footer logo and company name */
     footer .md\\:hidden .flex.items-center {
         margin-bottom: 2rem;
     }
-    
+
     footer .md\\:hidden .text-gray-300 {
         color: #D1D5DB;
     }
-    
+
     /* Mobile footer menu items */
     footer .md\\:hidden nav ul li {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
+
     footer .md\\:hidden nav ul li:last-child {
         border-bottom: none;
     }
-    
+
     footer .md\\:hidden nav a {
         display: flex;
         align-items: center;
@@ -477,11 +488,11 @@ body {
         text-decoration: none;
         transition: color 0.2s ease;
     }
-    
+
     footer .md\\:hidden nav a:hover {
         color: #f97316;
     }
-    
+
     /* Arrow icons in mobile footer */
     footer .md\\:hidden svg {
         width: 12px;
@@ -489,16 +500,16 @@ body {
         color: black;
         fill: currentColor;
     }
-    
+
     /* Mobile footer text */
     footer .md\\:hidden .text-center {
         margin-top: 2rem;
     }
-    
+
     footer .md\\:hidden .text-gray-300 {
         color: #D1D5DB;
     }
-    
+
     footer .md\\:hidden .text-gray-400 {
         color: #9CA3AF;
     }
@@ -552,26 +563,141 @@ body {
         bottom: 1rem;
         right: 1rem;
     }
-    
+
     #page-top-btn .bg-purple-200 {
         padding: 0.5rem;
     }
-    
+
     #page-top-btn .bg-gray-200 {
         padding: 0.375rem;
     }
-    
+
     #page-top-btn svg {
         width: 1.25rem;
         height: 1.25rem;
     }
-    
+
     #page-top-btn .text-xs {
         font-size: 0.625rem;
     }
+
 }
 
 /* Prevent body scroll when menu is open */
 body.menu-open {
     overflow: hidden;
 }
+
+/* Use image assets for slick arrows */
+.carousel .slick-prev,
+.carousel .slick-next {
+    width: 54px;
+    height: 54px;
+    background-color: transparent !important;
+    border-radius: 50%;
+}
+
+.carousel .slick-prev {
+    background: transparent url('../img/btn_prev.png') no-repeat center center;
+    background-size: contain;
+}
+
+.carousel .slick-next {
+    background: transparent url('../img/btn_next.png') no-repeat center center;
+    background-size: contain;
+}
+
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+    content: '';
+}
+
+/* Keep position on hover and avoid background overrides */
+.carousel .slick-prev:hover,
+.carousel .slick-next:hover,
+.carousel_semina .slick-prev:hover,
+.carousel_semina .slick-next:hover,
+.carousel_voice .slick-prev:hover,
+.carousel_voice .slick-next:hover {
+    background-color: transparent !important;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Final overrides: use image arrows and suppress default pseudo-elements */
+.carousel .slick-prev,
+.carousel .slick-next {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: transparent !important;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+
+    .carousel .slick-prev,
+    .carousel .slick-next {
+        width: 35px !important;
+        height: 35px !important;
+        background-color: transparent !important;
+        border-radius: 50%;
+    }
+}
+
+.carousel .slick-prev {
+    background: transparent url('../img/btn_prev.png') no-repeat center center !important;
+    background-size: contain !important;
+}
+
+.carousel .slick-next {
+    background: transparent url('../img/btn_next.png') no-repeat center center !important;
+    background-size: contain !important;
+}
+
+.carousel .slick-prev:before,
+.carousel .slick-next:before {
+    content: '' !important;
+    opacity: 0 !important;
+}
+
+
+/* Keep Y-translate on hover; disable scale and background overrides */
+.carousel .slick-prev:hover,
+.carousel .slick-next:hover {
+    background-color: transparent !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+/* Final overrides for seminar carousel: use image arrows */
+.carousel_semina .slick-prev,
+.carousel_semina .slick-next {
+	width: 20px !important;
+	height: 20px !important;
+	background-color: transparent !important;
+	border-radius: 50%;
+}
+@media (max-width: 768px) {
+	.carousel_semina .slick-prev,
+	.carousel_semina .slick-next {
+		width: 20px !important;
+		height: 20px !important;
+	}
+}
+.carousel_semina .slick-prev {
+	background: transparent url('../img/btn_prev1.png') no-repeat center center !important;
+	background-size: contain !important;
+}
+.carousel_semina .slick-next {
+	background: transparent url('../img/btn_next1.png') no-repeat center center !important;
+	background-size: contain !important;
+}
+.carousel_semina .slick-prev:before,
+.carousel_semina .slick-next:before {
+	content: '' !important;
+	opacity: 0 !important;
+}
+.carousel_semina .slick-prev:hover,
+.carousel_semina .slick-next:hover {
+	background-color: transparent !important;
+	transform: translateY(-50%) !important;
+}
+

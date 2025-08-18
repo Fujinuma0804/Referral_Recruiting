@@ -77,7 +77,7 @@ $(document).ready(function () {
         arrows: true,
         centerMode: true,
         centerPadding: '0%',
-        autoplay: true, // Enable autoplay
+        // autoplay: true, // Enable autoplay
         autoplaySpeed: 2000, // Autoplay interval in milliseconds
         responsive: [
             {
@@ -106,7 +106,7 @@ $(document).ready(function () {
         infinite: true,
         speed: 700,
         centerPadding: '0%',
-        // autoplay: true, // Enable autoplay
+        autoplay: true, // Enable autoplay
         autoplaySpeed: 2000, // Autoplay interval in milliseconds
     });
 
